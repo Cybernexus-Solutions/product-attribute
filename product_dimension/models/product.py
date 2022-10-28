@@ -65,7 +65,7 @@ class ProductTemplate(models.Model):
         IrParamSudo = self.env['ir.config_parameter'].sudo()
         volume_in_cubic_feet = IrParamSudo.get_param('product.volume_in_cubic_feet')
         if volume_in_cubic_feet:
-            to_unit_uom = self.env.ref("uom.product_uom_cubic_foot")
+            to_unit_uom = self.env.ref("uom.product_uom_foot")
         else:
             to_unit_uom = self.env.ref("uom.product_uom_meter")
 
