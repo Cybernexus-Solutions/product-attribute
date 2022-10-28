@@ -42,10 +42,10 @@ class ProductTemplate(models.Model):
     def _calc_volume(self, product_length, product_height, product_width, uom_id):
         volume = 0
         if product_length and product_height and product_width and uom_id:
-            length_m = self.convert_to_meters(product_length, uom_id)
-            height_m = self.convert_to_meters(product_height, uom_id)
-            width_m = self.convert_to_meters(product_width, uom_id)
-            volume = length_m * height_m * width_m
+            length = self.convert_to_volume_uom(product_length, uom_id)
+            height = self.convert_to_volume_uom(product_height, uom_id)
+            width = self.convert_to_volume_uom(product_width, uom_id)
+            volume = length * height * width
 
         return volume
 
@@ -60,12 +60,18 @@ class ProductTemplate(models.Model):
             self.dimensional_uom_id,
         )
 
-    def convert_to_meters(self, measure, dimensional_uom):
-        uom_meters = self.env.ref("uom.product_uom_meter")
+    def convert_to_volume_uom(self, measure, dimensional_uom):
+
+        IrParamSudo = self.env['ir.config_parameter'].sudo()
+        volume_in_cubic_feet = IrParamSudo.get_param('product.volume_in_cubic_feet')
+        if volume_in_cubic_feet:
+            to_unit_uom = self.env.ref("uom.product_uom_cubic_foot")
+        else:
+            to_unit_uom = self.env.ref("uom.product_uom_meter")
 
         return dimensional_uom._compute_quantity(
             qty=measure,
-            to_unit=uom_meters,
+            to_unit=to_unit_uom,
             round=False,
         )
 
