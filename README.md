@@ -30,10 +30,11 @@ addon | version | maintainers | summary
 [product_cost_security](product_cost_security/) | 16.0.1.0.0 | [![sergio-teruel](https://github.com/sergio-teruel.png?size=30px)](https://github.com/sergio-teruel) | Product cost security restriction view
 [product_dimension](product_dimension/) | 16.0.1.1.0 |  | Product Dimension
 [product_expiry_configurable](product_expiry_configurable/) | 16.0.1.0.0 |  | This model allows setting expiry times on category and to use the 'end_of_life' date for the computation of lot dates
-[product_logistics_uom](product_logistics_uom/) | 16.0.1.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Configure product weights and volume UoM
+[product_logistics_uom](product_logistics_uom/) | 16.0.3.0.0 | [![hparfr](https://github.com/hparfr.png?size=30px)](https://github.com/hparfr) | Configure product weights and volume UoM
 [product_manufacturer](product_manufacturer/) | 16.0.1.0.0 |  | Adds manufacturers and attributes on the product view.
 [product_multi_category](product_multi_category/) | 16.0.1.0.0 |  | Product - Many Categories
 [product_packaging_dimension](product_packaging_dimension/) | 16.0.1.0.1 |  | Manage packaging dimensions and weight
+[product_pricelist_revision](product_pricelist_revision/) | 16.0.1.0.0 |  | Product Pricelist Revision
 [product_route_mto](product_route_mto/) | 16.0.1.0.0 |  | This module allows to compute if a product is an 'MTO' one from its configured routes
 [product_sequence](product_sequence/) | 16.0.2.0.0 |  | Product Sequence
 [product_state](product_state/) | 16.0.1.0.0 | [![emagdalenaC2i](https://github.com/emagdalenaC2i.png?size=30px)](https://github.com/emagdalenaC2i) | Module introducing a state field on product template
