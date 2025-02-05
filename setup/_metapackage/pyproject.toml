@@ -1,7 +1,9 @@
 [project]
 name = "odoo-addons-oca-product-attribute"
-version = "18.0.20250105.0"
+version = "18.0.20250204.3"
 dependencies = [
+    "odoo-addon-product_attribute_archive==18.0.*",
+    "odoo-addon-product_category_active==18.0.*",
     "odoo-addon-product_dimension==18.0.*",
     "odoo-addon-product_logistics_uom==18.0.*",
     "odoo-addon-product_main_supplierinfo==18.0.*",
@@ -9,10 +11,19 @@ dependencies = [
     "odoo-addon-product_medical==18.0.*",
     "odoo-addon-product_net_weight==18.0.*",
     "odoo-addon-product_packaging_dimension==18.0.*",
+    "odoo-addon-product_packaging_level==18.0.*",
     "odoo-addon-product_pricelist_fixed_currency_rate==18.0.*",
+    "odoo-addon-product_pricelist_supplierinfo==18.0.*",
     "odoo-addon-product_print_category==18.0.*",
+    "odoo-addon-product_sale_manufactured_for==18.0.*",
     "odoo-addon-product_sequence==18.0.*",
     "odoo-addon-product_set==18.0.*",
+    "odoo-addon-product_state==18.0.*",
+    "odoo-addon-product_state_sale==18.0.*",
+    "odoo-addon-product_state_stock_base==18.0.*",
+    "odoo-addon-product_stock_state==18.0.*",
+    "odoo-addon-product_supplierinfo_archive==18.0.*",
+    "odoo-addon-product_supplierinfo_revision==18.0.*",
 ]
 classifiers=[
     "Programming Language :: Python",
